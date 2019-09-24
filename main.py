@@ -53,6 +53,8 @@ def validate_signup():
     if error_condition==True:
         #Always clear password fields under any error conditions, for security.
         password=''
+    else:
+        return render_template('welcome.html', title='User Signup', username=username)
 
     return render_template('index.html',
         title='User Signup',
